@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		#list {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.draggable {
+			cursor: move;
+			user-select: none;
+			width: 200px;
+			height: 100px;
+			background-color: orange;
+			margin: 20px;
+			text-align: center;
+		}
+
+		.placeholder {
+			background-color: red;
+			margin: 20px;
+			width: 200px;
+			opacity: .5;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="list">
+		<div class="draggable">A</div>
+		<div class="draggable">B</div>
+		<div class="draggable">C</div>
+		<div class="draggable">D</div>
+		<div class="draggable">E</div>
+	</div>
+
+	<script type="module" src="src/draggable.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #parent {
+            background-color: limegreen;
+            margin: 3rem;
+            position: relative;
+            height: 200vh;
+        }
+
+        .child {
+            height: 100px;
+            width: 100px;
+            background-color: salmon;
+            border: 1px solid black;
+            box-sizing: border-box;
+            /* margin: 1rem; */
+            position: sticky;
+            /* by default it is relative, then it becomes fixed when you scroll down the page and it touches the top */
+            top: 0;
+            /* sticky needs top */
+        }
+
+        .grandchild {
+            height: 50px;
+            width: 50px;
+            background-color: skyblue;
+            border: 1px solid black;
+            /* position: fixed; */
+            position: absolute;
+            /* position: relative; */
+            top: 50px;
+            left: 50px;
+            box-sizing: border-box;
+        }
+
+        #content {
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .content-show {
+            height: 500px;
+            transform: scaleY(1);
+            transition: 1s ease-in-out;
+        }
+
+        .content-hidden {
+            height: 0px;
+            transform: scaleY(0);
+            transition: 1s ease-in-out;
+        }
+    </style>
+    <script src="src/animation.js" defer></script>
+</head>
+
+<body>
+    <div id="parent">
+        <span>Parent</span>
+        <div class="child">One</div>
+        <div class="child">
+            Two
+            <div class="grandchild"></div>
+        </div>
+        <div class="child">Three</div>
+        <button id="button">Show</button>
+        <div id="content" class="xcontent-hidden">
+            <p>Here is some content man</p>
+            <p>Here is some content man</p>
+            <p>Here is some content man</p>
+            <p>Here is some content man</p>
+            <p>Here is some content man</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

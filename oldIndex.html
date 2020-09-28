@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="src/styles.css">
+</head>
+
+<body>
+	<div id="tooltip">I'm a tooltip</div>
+
+	<a href="favicon.ico" download>Download</a> <!-- this is cool-->
+
+	<div>Numbers only</div>
+	<button id="copy">Copy</button>
+	<input id="numberInput" />
+
+	<div id="output"></div>
+	<div id="app" class="app">
+		<div class="box"></div>
+		<textarea maxlength="200" id="message"></textarea>
+		<div id="counter">0</div>
+		<iframe id="frame" src="./inner.html">
+		</iframe>
+		<input type="range">
+		<div class="range-container">
+			<div class="left"></div>
+			<div class="knob" id="knob"></div>
+			<div class="right"></div>
+		</div>
+		<div class="resizableContainer">
+			<div class="leftResizer">
+				<p>left</p>
+			</div>
+			<div id="resizer">
+			</div>
+			<div class="rightResizer">
+				<p>right</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="module" src="src/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body {
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
+  }
+  
+#tooltip {
+display: none;
+position: absolute;
+background-color: gold;
+}
+
+.app {
+	background-color: blue;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.box {
+	background-color: orange;
+	height: 100px;
+	width: 100px;
+	left: 100px;
+	position: fixed;	/* removed from box */
+	left: 100px;
+	top: 100px;
+	padding: 10px;
+	margin: 20px;
+	border: 5px solid red;
+}
+
+
+#child {
+	height: 1000px;
+}
+
+.range-container {
+	align-items: center;
+	display: flex;
+	height: 1.5rem;
+}
+
+.knob {
+background-color: greenyellow;
+height: 1.5rem;
+width: 1.5rem;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.left, .right {
+background-color: gold;
+height: 2px;
+}
+
+.right {
+	flex: 1;
+}
+
+.resizableContainer {
+	display: flex;
+	flex-direction: row;
+	height: 200px;
+	
+}
+
+.leftResizer {
+	background-color: green;
+	display: flex;
+	justify-content: right;
+}
+
+#resizer {
+	width: 5px;
+	background-color: black;
+}
+
+.rightResizer {
+	background-color: red;
+	flex: 1 1 0%;
+}
